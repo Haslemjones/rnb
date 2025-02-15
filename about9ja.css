@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure Background is Black */
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Countdown Styling */
+#countdown-container {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Hide Video Initially */
+.video-container {
+    display: none;  /* Hidden at first */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+/* Show Video When Countdown Ends */
+.video-container.show {
+    display: flex;
+}
+
+/* Video Styling */
+.video-container video {
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border: 4px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+}
