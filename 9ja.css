@@ -120,6 +120,7 @@
 
     .brand-text {  
         font-size: 18px;  
+        top: calc(100% + 20px);
         white-space: normal;  /* Allow text to wrap */
         width: 80%;  /* Limit width so it wraps naturally */
         left: 45%;  
@@ -323,8 +324,8 @@ span:nth-child(6){
 /* Aligning "WE ARE AFRICA'S BEST NEW GEN BRAND" with .center */
 .brand-text {  
     position: absolute;  
-    left: 45%;  /* Adjust positioning */
-    top: 80%;
+    left: 3%;  /* Adjust positioning */
+    top: calc(100% + 20px);
     transform: translateY(-50%);
     font-size: 22px;
     color: white;
