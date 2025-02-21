@@ -1,10 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 
 /* Navbar - Keeping everything the same */
 .navbar {
@@ -48,6 +48,8 @@
     color: white;
     font-size: 50px;
 }
+
+
 
 /* RESPONSIVENESS */
 @media screen and (max-width: 768px) {
@@ -115,8 +117,6 @@
         max-width: 350px;
         height: 400px;
     }
-
-   
 }
 
 @media screen and (max-width: 480px) {
@@ -134,295 +134,89 @@
     }
 }
 
-body {
-    background-color: #09200f; /* Dark Green */
-    color: white;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
-}
-
-/* Hero Section */
-.hero-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 5%;
-}
-
-/* Text Side */
-.hero-text {
-    position: absolute;
-    top: 15%;
-    left: 5%;
+.h1-brand{
     color: #fff;
-    font-weight: bold;
-    font-size: 18px;
+    margin-top: 83px;
     text-transform: uppercase;
-    line-height: 1.1;
-}
-
-/* Green Dot */
-.dot {
-    width: 15px;
-    height: 15px;
-    background-color: #00ff00;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: -25px;
-}
-
-/* Main Heading */
-.main-heading {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    font-size: 3rem;
+    font-size: 22px;
     font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-}
-
-.pattern-container svg {
-    width: 100%;
-    height: auto;
-}
-
-@keyframes ani{
-    0%{
-        transition: 0.7s;
-        transform: rotate(0deg);
-    }
-    20%{
-        transition: 0.7s;
-        transform: rotate(95deg);
-    }
-    50%{
-        transition: 0.7s;
-        transform: rotate(360deg);
-    }
-    100%{
-        transition: 0.7s;
-        transform: rotate(0deg);
-    }
-}
-
-/* Adjusting pattern positioning closer to text */
-.pattern-container {
-    position: absolute;
-    left: calc(5% + 120px);
-    top: 27%;
-    right: 20%;
-    width: 300px;
-    height: auto;
-    transform: translateX(-80px); /* Moves it under the 'S' in "BOYS" */
-}
-
-.loader{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-    top: -35%;
-    left: 90%;
-}
-
-.loader-outter{
-    position: absolute;
-    border: 4px solid #00ff00;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.loader-inner{
-    position: absolute;
-    border: 4px solid goldenrod;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.loader-outter{
-    width: 100%;
-    height: 100%;
-    border-left-color: transparent;
-    animation: rotate 1s cubic-bezier(0.15, 0.61, 0.58, 0.4)infinite;
-}
-
-.loader-inner{
-    width: 35px;
-    height: 35px;
-    border-top-color: transparent;
-    animation: rotate-reverse 1s cubic-bezier(0.15, 0.61, 0.58, 0.4)infinite;
-}
-
-@keyframes rotate{
-    100%{
-        transform: translate(-50%, -50%)
-        rotate(360deg);
-    }
-}
-
-@keyframes rotate-reverse{
-    100%{
-        transform: translate(-50%, -50%)
-        rotate(-360deg);
-    }
-}
-
-.brand-text {
-    position: absolute;
-    left: 3%; /* Adjusting closer to the pattern */
-    top: 53%; /* Moving it higher */
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: goldenrod;
-    text-transform: uppercase;
-    text-align: left; /* Align text properly */
-    width: 60%; /* Adjust width for responsiveness */
-    animation: fadeInText 1.5s ease-in-out forwards;
-    opacity: 0;
-    z-index: 2;
-    max-width: 400px;
-
-}
-
-/* Ensure the animation does not shift the text */
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-    .brand-text {
-        font-size: 18px;
-        left: 3%; /* Adjust positioning on small screens */
-        top: 60%;
-        width: 70%;
-    }
-}
-
-.hero-text span {
-    opacity: 0;
-    transform: translateY(20px);
-    display: inline-block;
-    animation: fadeInUp 0.8s ease-in-out forwards;
-}
-
-/* Delay each word */
-.hero-text span:nth-child(1) {
-    animation-delay: 0.2s; /* "Real" */
-}
-.hero-text span:nth-child(2) {
-    animation-delay: 0.6s; /* "Naija" */
-}
-.hero-text span:nth-child(3) {
-    animation-delay: 1s; /* "Boys" */
-}
-
-/* Keyframes for animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Ensure full height */
-.main-section {
-    width: 100%;
-    min-height: 100vh; /* Ensure it takes full height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 100vh; /* Push it below existing content */
-}
-
-/* Boxed Section */
-.who-we-are {
-    max-width: 600px;
-    padding: 20px;
-    background: #09200f;
-    border-radius: 10px;
-    position: relative; /* Fix alignment issue */
-}
-
-/* Title */
-.who-we-are-header {
-    font-size: 1rem;
-    color: #C8A500;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Text */
-.who-we-are-content {
-    font-size: 18px;
-    color: white;
+    font-family: sans-serif;
     line-height: 1.6;
+    margin-left: 15px;
 }
 
-/* Ensure it stays centered on mobile */
-@media (max-width: 768px) {
-    .main-section {
-        margin-top: 135vh; /* Push it down slightly more */
-    }
-    .who-we-are-content {
-        font-size: 16px;
-    }
+.get-started-btn{
+    margin: 14vh 8vh;
+    padding: 2vh;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-/* Glowing Border Animation */
-@property --angle {
+.get-started-btn:hover{
+    background: #00ff00;
+    box-shadow: goldenrod;
+}
+
+.page-content {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.who-heading{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: goldenrod;
+    font-weight: light;
+}
+
+.who-content{
+    line-height: 1.7;
+}
+
+.page-content{
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+}
+
+@property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
 
-.who-we-are::after, 
-.who-we-are::before {
+.page-content::after, .page-content::before{
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), #00ff00, goldenrod, #fff, goldenrod, #00ff00);
+    background-image: conic-gradient(from var(--angle), #00ff00,  goldenrod, #00ff00, goldenrod);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
-    padding: 3px;
     border-radius: 10px;
-    animation: spin 3s linear infinite;
+    padding: 3px;
+    animation: 3s spin linear infinite;
 }
 
-.who-we-are::before {
+.page-content::before{
     filter: blur(1.5rem);
-    opacity: 0.5;
+    opacity: (0.5);
 }
 
-@keyframes spin {
-    from {
+@keyframes spin{
+    from{
         --angle: 0deg;
     }
-    to {
+    to{
         --angle: 360deg;
     }
 }
