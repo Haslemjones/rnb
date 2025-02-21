@@ -158,11 +158,11 @@
 }
 
 .word-2 {
-    animation-delay: 1.5s; /* Naija appears after Real */
+    animation-delay: 0.7s; /* Naija appears after Real */
 }
 
 .word-3 {
-    animation-delay: 2.5s; /* Boys appears after Naija */
+    animation-delay: 0.9s; /* Boys appears after Naija */
 }
 
 @keyframes fadeSlideUp {
