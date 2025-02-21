@@ -145,6 +145,37 @@
     margin-left: 15px;
 }
 
+.word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease-in-out forwards;
+}
+
+/* Delay each word to make them appear one after another */
+.word-1 {
+    animation-delay: 0.5s; /* Real appears first */
+}
+
+.word-2 {
+    animation-delay: 1.5s; /* Naija appears after Real */
+}
+
+.word-3 {
+    animation-delay: 2.5s; /* Boys appears after Naija */
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .get-started-btn{
     margin: 14vh 8vh;
     padding: 2vh;
