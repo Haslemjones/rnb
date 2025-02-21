@@ -1,10 +1,10 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 
 /* Navbar - Keeping everything the same */
 .navbar {
@@ -48,8 +48,6 @@
     color: white;
     font-size: 50px;
 }
-
-
 
 /* RESPONSIVENESS */
 @media screen and (max-width: 768px) {
@@ -191,7 +189,6 @@ body {
     color: white;
 }
 
-
 .pattern-container svg {
     width: 100%;
     height: auto;
@@ -226,7 +223,6 @@ body {
     height: auto;
     transform: translateX(-80px); /* Moves it under the 'S' in "BOYS" */
 }
-
 
 .loader{
     width: 50px;
@@ -349,72 +345,60 @@ body {
     }
 }
 
+/* Ensure full height */
 .main-section {
     width: 100%;
+    min-height: 100vh; /* Ensure it takes full height */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    margin-top: 100vh; /* Adjust to push it below existing content */
+    padding-top: 100vh; /* Push it below existing content */
 }
 
+/* Boxed Section */
 .who-we-are {
-    max-width: 600px; /* Controls the width */
+    max-width: 600px;
     padding: 20px;
+    background: #09200f;
+    border-radius: 10px;
+    position: relative; /* Fix alignment issue */
 }
 
+/* Title */
 .who-we-are-header {
     font-size: 1rem;
-    color: #C8A500; /* Gold color */
+    color: #C8A500;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Text */
 .who-we-are-content {
     font-size: 18px;
     color: white;
     line-height: 1.6;
-    font-weight: light;
-    
 }
 
-@media (max-width: 768px){
+/* Ensure it stays centered on mobile */
+@media (max-width: 768px) {
     .main-section {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 120vh; /* Adjust to push it below existing content */
-        right: 20%;
+        margin-top: 135vh; /* Push it down slightly more */
     }
     .who-we-are-content {
         font-size: 16px;
-        color: white;
-        line-height: 1.6;
-        font-weight: light;
-        right: -20%;
-        
     }
 }
 
-.who-we-are{
-    margin: 0 auto;
-    background:#09200f;
-    border-radius: 10px;
-    position: relative;
-}
-
-@property --angle{
+/* Glowing Border Animation */
+@property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
 
-.who-we-are::after, .who-we-are::before{
-    
+.who-we-are::after, 
+.who-we-are::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -426,19 +410,19 @@ body {
     z-index: -1;
     padding: 3px;
     border-radius: 10px;
-    animation: 3s spin linear infinite;
+    animation: spin 3s linear infinite;
 }
 
-.who-we-are::before{
+.who-we-are::before {
     filter: blur(1.5rem);
     opacity: 0.5;
 }
 
-@keyframes spin{
-    from{
+@keyframes spin {
+    from {
         --angle: 0deg;
     }
-    to{
+    to {
         --angle: 360deg;
     }
 }
