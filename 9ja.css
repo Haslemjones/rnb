@@ -296,6 +296,7 @@ body {
     opacity: 0;
     z-index: 2;
     max-width: 400px;
+
 }
 
 /* Ensure the animation does not shift the text */
@@ -345,5 +346,99 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.main-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100vh; /* Adjust to push it below existing content */
+}
+
+.who-we-are {
+    max-width: 600px; /* Controls the width */
+    padding: 20px;
+}
+
+.who-we-are-header {
+    font-size: 1rem;
+    color: #C8A500; /* Gold color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.who-we-are-content {
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+    font-weight: light;
+    
+}
+
+@media (max-width: 768px){
+    .main-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 120vh; /* Adjust to push it below existing content */
+        right: 20%;
+    }
+    .who-we-are-content {
+        font-size: 16px;
+        color: white;
+        line-height: 1.6;
+        font-weight: light;
+        right: -20%;
+        
+    }
+}
+
+.who-we-are{
+    margin: 0 auto;
+    background:#09200f;
+    border-radius: 10px;
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.who-we-are::after, .who-we-are::before{
+    
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #00ff00, goldenrod, #fff, goldenrod, #00ff00);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.who-we-are::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
     }
 }
