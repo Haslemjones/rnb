@@ -177,7 +177,7 @@
 }
 
 .get-started-btn{
-    margin: 14vh 8vh;
+    margin: 14vh 4vh;
     padding: 2vh;
     border-radius: 100px;
     border: none;
@@ -189,7 +189,7 @@
 
 .get-started-btn:hover{
     background: #00ff00;
-    box-shadow: goldenrod;
+    color: white;
 }
 
 .page-content {
@@ -269,7 +269,7 @@
     .brand-image{
         max-width: 300px;
         width: 100%;
-        top: 30%;
+        top: 40%;
         left: 40%;
     }
 }
