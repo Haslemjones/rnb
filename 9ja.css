@@ -251,3 +251,25 @@
         --angle: 360deg;
     }
 }
+
+.brand-image{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 500px;
+}
+
+.brand-section{
+    position: relative;
+}
+
+@media screen and (max-width: 768px){
+    .brand-image{
+        max-width: 300px;
+        width: 100%;
+        top: 30%;
+        left: 40%;
+    }
+}
