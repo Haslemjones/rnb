@@ -5,6 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+    width: 100%;
+}
 
 /* Navbar - Keeping everything the same */
 .navbar {
@@ -272,4 +276,83 @@
         top: 40%;
         left: 40%;
     }
+
+    .get-started-btn{
+        margin: 14vh 2vh;
+    }
+}
+
+.our-journey{
+    margin-top: 3rem;
+}
+
+.our-vision{
+    margin-top: 3rem;
+}
+
+.our-commitment{
+    margin-top: 3rem;
+}
+
+.join-us{
+    margin-top: 3rem;
+}
+
+.our-heading{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: goldenrod;
+    font-weight: light;
+}
+
+.our-content{
+    line-height: 1.7;
+}
+
+.vision-heading{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: goldenrod;
+    font-weight: light;
+}
+
+.vision-content{
+    line-height: 1.7;
+}
+
+.commitment-heading{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: goldenrod;
+    font-weight: light;
+}
+
+.commitment-content{
+    line-height: 1.7;
+}
+
+.join-heading{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: goldenrod;
+    font-weight: light;
+}
+
+.join-content{
+    line-height: 1.7;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
