@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    max-width: 100%;
 }
 
-body{
+html, body{
     overflow-x: hidden;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Navbar - Keeping everything the same */
@@ -143,8 +149,7 @@ body{
     margin-top: 83px;
     text-transform: uppercase;
     font-size: 22px;
-    font-weight: bold;
-    font-family: sans-serif;
+    
     line-height: 1.6;
     margin-left: 15px;
 }
@@ -159,14 +164,17 @@ body{
 /* Delay each word to make them appear one after another */
 .word-1 {
     animation-delay: 0.5s; /* Real appears first */
+    font-family: italic;
 }
 
 .word-2 {
     animation-delay: 0.7s; /* Naija appears after Real */
+    font-family: italic;
 }
 
 .word-3 {
     animation-delay: 0.9s; /* Boys appears after Naija */
+    font-family: italic;
 }
 
 @keyframes fadeSlideUp {
@@ -182,8 +190,8 @@ body{
 
 .get-started-btn{
     margin: 14vh 4vh;
-    padding: 2vh;
-    border-radius: 100px;
+    padding: 10px;
+    border-radius: 10px;
     border: none;
     background-color: #fff;
     cursor: pointer;
@@ -262,7 +270,9 @@ body{
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
+    display: block;
+    height: auto;
 }
 
 .brand-section{
@@ -355,4 +365,13 @@ body{
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.video-container video {
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border: 4px solid #047c0469;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(188, 207, 11, 0.7);
 }
